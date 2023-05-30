@@ -30,14 +30,14 @@ class _GameSubtracaoState extends State<GameSubtracao> {
   List<int> opcoesRespostas = [];
 
   List<String> imagensParabens = [
-    'assets/parabens1.jpg',
-    'assets/parabens2.jpg',
-    'assets/parabens3.jpg',
+    'assets/parabens1.png',
+    'assets/parabens2.png',
+    'assets/parabens3.png',
   ];
 
   List<String> imagensConsolacao = [
-    'assets/consolacao1.jpg',
-    'assets/consolacao2.jpg',
+    'assets/consolacao1.png',
+    'assets/consolacao2.png',
   ];
 
   int numPergunta = 0;
@@ -132,6 +132,7 @@ class _GameSubtracaoState extends State<GameSubtracao> {
       });
     } else {
       global.adicaoCompleted = true;
+      global.subtracaoCompleted = true;
       showDialog(
         context: context,
         barrierDismissible: false,

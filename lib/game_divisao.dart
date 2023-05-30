@@ -32,14 +32,14 @@ class _GameDivisaoState extends State<GameDivisao> {
   List<int> opcoesRespostas = [];
 
   List<String> imagensParabens = [
-    'assets/parabens1.jpg',
-    'assets/parabens2.jpg',
-    'assets/parabens3.jpg',
+    'assets/parabens1.png',
+    'assets/parabens2.png',
+    'assets/parabens3.png',
   ];
 
   List<String> imagensConsolacao = [
-    'assets/consolacao1.jpg',
-    'assets/consolacao2.jpg',
+    'assets/consolacao1.png',
+    'assets/consolacao2.png',
   ];
 
   int numPergunta = 0;
@@ -130,7 +130,7 @@ class _GameDivisaoState extends State<GameDivisao> {
         gerarQuestao();
       });
     } else {
-      global.multiplicacaoCompleted = true;
+      global.divisaoCompleted = true;
       showDialog(
         context: context,
         barrierDismissible: false,
@@ -176,116 +176,120 @@ class _GameDivisaoState extends State<GameDivisao> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Quarta fase'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Pergunta ${numPergunta + 1} de 10',
-              style: const TextStyle(fontSize: 24.0),
-            ),
-            const SizedBox(height: 16.0),
-            Text(
-              '$dividendo ÷ $divisor = ?',
-              style: const TextStyle(fontSize: 24.0),
-            ),
-            const SizedBox(height: 16.0),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[0]);
-                        },
-                        child: Text('${opcoesRespostas[0]}'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[1]);
-                        },
-                        child: Text('${opcoesRespostas[1]}'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[2]);
-                        },
-                        child: Text('${opcoesRespostas[2]}'),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[3]);
-                        },
-                        child: Text('${opcoesRespostas[3]}'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[4]);
-                        },
-                        child: Text('${opcoesRespostas[4]}'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[5]);
-                        },
-                        child: Text('${opcoesRespostas[5]}'),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[6]);
-                        },
-                        child: Text('${opcoesRespostas[6]}'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[7]);
-                        },
-                        child: Text('${opcoesRespostas[7]}'),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[8]);
-                        },
-                        child: Text('${opcoesRespostas[8]}'),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 8.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          verificarResposta(opcoesRespostas[9]);
-                        },
-                        child: Text('${opcoesRespostas[9]}'),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
+        appBar: AppBar(
+          title: const Text('Quarta fase'),
         ),
-      ),
-    );
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                  'assets/background_2.jpg'), // Replace with your image path
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 16.0),
+                Text(
+                  '$dividendo ÷ $divisor = ?',
+                  style: const TextStyle(fontSize: 24.0),
+                ),
+                const SizedBox(height: 16.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[0]);
+                            },
+                            child: Text('${opcoesRespostas[0]}'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[1]);
+                            },
+                            child: Text('${opcoesRespostas[1]}'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[2]);
+                            },
+                            child: Text('${opcoesRespostas[2]}'),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[3]);
+                            },
+                            child: Text('${opcoesRespostas[3]}'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[4]);
+                            },
+                            child: Text('${opcoesRespostas[4]}'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[5]);
+                            },
+                            child: Text('${opcoesRespostas[5]}'),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[6]);
+                            },
+                            child: Text('${opcoesRespostas[6]}'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[7]);
+                            },
+                            child: Text('${opcoesRespostas[7]}'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[8]);
+                            },
+                            child: Text('${opcoesRespostas[8]}'),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 8.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              verificarResposta(opcoesRespostas[9]);
+                            },
+                            child: Text('${opcoesRespostas[9]}'),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }
