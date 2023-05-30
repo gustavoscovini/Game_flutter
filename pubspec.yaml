@@ -1,0 +1,43 @@
+name: boatematica
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+    sdk: ">=2.19.2 <3.0.0"
+
+dependencies:
+    flutter:
+        sdk: flutter
+    cupertino_icons: ^1.0.2
+    flutter_gifimage: ^1.0.1
+
+dev_dependencies:
+    flutter_launcher_icons: ^0.13.1
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^2.0.0
+
+flutter:
+    uses-material-design: true
+    assets:
+        - assets\background.gif
+        - assets\botao_play.png
+        - assets\botao_creditos.png
+        - assets\soma.png
+        - assets\subtracao.png
+        - assets\subtracao_b.png
+        - assets\divisao.png
+        - assets\divisao_b.png
+        - assets\multiplicacao.png
+        - assets\multiplicacao_b.png
+        - assets\parabens1.png
+        - assets\parabens2.png
+        - assets\parabens3.png
+        - assets\parabens4.png
+        - assets\parabens5.png
+        - assets\consolacao1.png
+        - assets\consolacao2.png
+        - assets\consolacao3.png
+        - assets\background.jpeg
+        - assets\panda.jpg
